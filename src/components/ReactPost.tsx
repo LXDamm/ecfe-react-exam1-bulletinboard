@@ -9,11 +9,11 @@ interface Props {
 const ReactPost: React.FC<Props> = (props: any) => {
     const [liked, setLiked] = useState(false);
     return (
-        <>
-            <p>{props.question}</p>
-            <p>{props.answer}</p>
-            {liked ? <PostLike/> : <button onClick={() => { setLiked(true) }}>👍</button>}
-        </>
+        <div className="ReactPost">
+            <h4>{ props.question }</h4>
+            <p>{ props.answer }</p>
+            { liked ? <PostLike/> : <button onClick={() => { setLiked(true) }}>👍</button> }
+        </div>
     );
 }
 
